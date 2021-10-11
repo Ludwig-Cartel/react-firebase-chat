@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './App.css';
+import configData from "./firebase-config.json";
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -9,15 +10,7 @@ import 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-firebase.initializeApp({
-  apiKey: "AIzaSyBLNsIKmwdMY6xN4gExP72MHxhVxdB2KMU",
-  authDomain: "react-firebase-chat-227b4.firebaseapp.com",
-  projectId: "react-firebase-chat-227b4",
-  storageBucket: "react-firebase-chat-227b4.appspot.com",
-  messagingSenderId: "453861746747",
-  appId: "1:453861746747:web:4a5b6c72b776c853d3941e",
-  measurementId: "G-CVJHLYXXSE"
-})
+firebase.initializeApp(configData);
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
