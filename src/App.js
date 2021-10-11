@@ -6,14 +6,11 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
-import PropTypes from 'prop-types';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-
 firebase.initializeApp(configData);
-
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
@@ -107,6 +104,7 @@ function ChatRoom() {
   </>)
 }
 
+
 function ChatMessage(props) {
   const { text, uid, photoURL } = props.message;
 
@@ -120,8 +118,5 @@ function ChatMessage(props) {
   </>)
 }
 
-ChatMessage.propTypes = {
-  message: PropTypes.any,
-};
 
 export default App;
