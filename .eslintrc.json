@@ -35,7 +35,6 @@
             "warn",
             { "allow": ["clear", "info", "error", "dir", "trace", "log"] }
            ],
-           "no-undef":"off",
            "no-param-reassign":"off",
            "jsx-a11y/alt-text":"off",
            "react/prop-types": "off",
